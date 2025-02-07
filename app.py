@@ -72,7 +72,6 @@ from sklearn.preprocessing import MinMaxScaler
 
 app = Flask(__name__)
 
-# Modeli eğit ve hazırla
 def load_model():
     df = pd.read_csv('/content/data.csv')
     data = df.values.reshape(-1, 1)
