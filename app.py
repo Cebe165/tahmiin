@@ -73,6 +73,7 @@ from sklearn.preprocessing import MinMaxScaler
 app = Flask(__name__)
 
 def load_model():
+    file_path = os.path.join(os.path.dirname(__file__), 'data.csv')
     df = pd.read_csv('/content/data.csv')
     data = df.values.reshape(-1, 1)
     scaler = MinMaxScaler(feature_range=(0, 1))
